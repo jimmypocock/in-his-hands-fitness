@@ -1,9 +1,59 @@
+/***
+ * COLORS
+ ***
+
+
+white: #F6F6F6;
+black: #2B2B2B;
+soft white: #F6F6F6;
+bright red: #ec2d56;
+dark blue: #00003b;
+
+
+black: #2B2B2B
+red: #DE1B1B
+white: #F6F6F6
+yellow: #E9E581
+blue: #4A96AD;
+
+
+
+*/
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  color: #242424;
+  color: #2B2B2B;
 }
 
 html{
@@ -14,7 +64,7 @@ html{
 body {
   font-size: 62.5%;
   margin:0;
-  background: #f8f8f8;
+  background: #F6F6F6;
 }
 
 .container {
@@ -30,48 +80,58 @@ body {
 
 nav {
   width: 100%;
-  min-height: 100px;
-  background: #f8f8f8;
-  position: relative;
+  /*min-height: 60px;*/
+  background: #F6F6F6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*position: relative;*/
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
 }
 
 nav ul {
   float: left;
   list-style: none;
   padding-left: 0;
+  margin:0;
 }
 
 nav li {
   float:left;
   margin-right:10px;
   margin-left:10px;
-  margin-top: 23px;
+  /*margin-top: 23px;*/
+  height: 47px;
+  line-height: 46px;
 }
 
 nav a {
   transition: all 0.4s ease;
   text-decoration: none;
-  font-size: 2.5em;
-  font-weight: 300;
+  font-size: 1.5em;
+  font-weight: 400;
   text-transform: uppercase;
-  border-bottom: 1px solid #f8f8f8;
+  border-bottom: 0;
   letter-spacing: 2px;
+  color: #54575c;
+
 }
 nav a:hover {
-  color: rgba(0,0,0,0.8);
-  border-bottom: 1px solid #242424;
-  border-color: rgba(0,0,0,0.5);
+  color: #4A96AD;
+  /*border-bottom: 1px solid #4A96AD;
+  border-color: #4A96AD;*/
+  text-shadow: 0px 2px 4px rgba(222, 27, 27,0.2);
 }
 
 .logo {
   position: absolute;
-  top: 45px;
+  top: 65px;
   left: 0;
   right: 0;
   margin: 0 auto;
   width: 275px;
   border-radius:50%;
-  border:5px solid white;
+  background: rgba(0, 0, 59, 0.25);
+  border:7px solid rgba(255, 254, 241, 0.5);
 }
 
 .section {
@@ -79,22 +139,66 @@ nav a:hover {
 }
 .main.section {
   min-height: 350px;
-  height: 350px;
-  background: #fff;
-  background-size: auto 100%;
+  height: 500px;
+  background: rgba(0,0,59, 0.95);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: scroll;
+  background-attachment: fixed;
+  background-image: url('images/gym.png');
 }
 h1 {
-  color: #242424;
-  font-family: 'Roboto Slab', Verdana, "Times New Roman", serif;
-  font-weight: 300;
-  font-size: 9em;
-  text-align: center;
   margin:0;
-  padding-top: 200px;
 }
+h1 span {
+  color: #2B2B2B;
+  font-family: 'Roboto Slab', Verdana, "Times New Roman", serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding-top: 0;
+  text-transform: uppercase;
+}
+.in-his-hands-wrapper {
+  /*border: 3px solid #4A96AD;*/
+  display: block;
+  float: left;
+  /*padding: 2px;*/
+  border-radius: 3px;
+  /*margin-right: 8px;*/
+}
+
+.in-his-hands {
+  /*background: #2B2B2B;*/
+  /*background: #4A96AD;*/
+  background: #F6F6F6;
+  /*color: #F6F6F6;*/
+  /*color: #4A96AD;*/
+  color: #54575c;
+  /*padding-left: 8px;*/
+  padding-right: 6px;
+  border-radius: 3px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  /*box-shadow: 0 4px 8px rgba(0,0,0,0.175);*/
+}
+.capital {
+  font-size: 1.325em;
+  color: #54575c;
+  font-weight: 600;
+}
+.fitness {
+  letter-spacing: 1px;
+  /*color: #DE1B1B;*/
+  /*color: #2B2B2B;*/
+  color: #4A96AD;
+  font-weight: 400;
+  font-size: 2em;
+  /*height: 47px;
+  line-height: 46px;*/
+}
+
 
 .testimonials.section {
 }
@@ -171,7 +275,7 @@ input {
   box-shadow: inset 0 1px 2px rgba(36,36,36,0.18);
   height: 35px;
   /*width: 100%;*/
-  background-color: #f8f8f8;
+  background-color: #F6F6F6;
   border: 1px solid #c0c8c8;
   border-radius: 3px;
   display: block;

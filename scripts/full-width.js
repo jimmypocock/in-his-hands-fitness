@@ -1,7 +1,7 @@
 var resetDimensions = function() {
   var winHeight = $(window).height()
-  $(".page").css("max-height", (winHeight) + "px");
-  $(".page").css("height", (winHeight) + "px")
+  $(".main.section").css("max-height", (winHeight - 150) + "px");
+  $(".main.section").css("height", (winHeight - 150) + "px")
 }
 
 $(window).on('resize', resetDimensions);
