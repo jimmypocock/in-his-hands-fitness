@@ -7,6 +7,10 @@
     font-family: $slab;
     font-size: 2em;
 
+    @media screen and (max-width: 420px) {
+      font-size: 1.25em;
+    }
+
     .in-his-hands {
       font-weight: 600;
       letter-spacing: 1px;

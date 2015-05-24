@@ -1,30 +1,46 @@
 .subscription.form {
-  max-width: 350px;
-  border: 6px solid rgba($white, 0.5);
-  border-radius: 6px;
+  border-radius: 1px;
   background: rgba($blue, 0.9);
   background-image:
     linear-gradient(
       to top right,
-      rgba($lightBlue, 0.1), rgba($blue, 0.7) 50%
+      rgba($lightBlue, 0.1), rgba($blue, 0.1) 50%
     );
   box-shadow: 0 4px 10px rgba($black,0.35);
   margin: 0 auto;
+  text-align: center;
   @include rem-fallback(padding, 1.5);
 
-  p {
-    line-height: 1.2;
-    font-size: 1.75em;
-    letter-spacing: 1.25px;
+  h1,
+  h2,
+  p,
+  label {
     color: $white;
+  }
+
+  h1 {
+    font-size: 5.5em;
+    font-weight: 300;
+    @include rem-fallback(margin-bottom, 2.25);
+  }
+
+  h2 {
+    font-size: 2em;
+    letter-spacing: 1.5px;
     @include rem-fallback(margin-bottom, 1.5);
   }
 
-  label {
-    color: $white;
+  p {
+    line-height: 1.2;
     font-size: 1.5em;
-    font-weight: 400;
     letter-spacing: 0.5px;
+    max-width: 500px;
+    margin: 0 auto;
+    @include rem-fallback(margin-bottom, 1.5);
+  }
+
+  .error {
+    margin-bottom: 5px;
   }
 
   input {
@@ -34,6 +50,7 @@
     border-top-color: #999;
     border-radius: 3px;
     width: 100%;
+    max-width: 275px;
 
     &[type="email"] {
       margin-bottom: 15px;

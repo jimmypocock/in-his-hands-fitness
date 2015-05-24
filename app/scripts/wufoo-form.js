@@ -9,7 +9,7 @@ $(document).on('ready', function(){
 
     if ($email.val() === ""){
       e.preventDefault();
-      $messages.empty().append('<label>An email address is required.</label>');
+      $messages.empty().append('<p class="error">An email address is required.</p>');
       $submit.blur();
       return false;
     }
