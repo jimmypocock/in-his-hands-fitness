@@ -1,8 +1,7 @@
+'use strict';
+
 $(document).on('ready', function(){
-
-
   $('form.wufoo').on('submit', function(e){
-
     var $email = $('.wufoo input[type="email"]'),
         $submit = $('.wufoo input[type="submit"]'),
         $form = $('form.wufoo'),
