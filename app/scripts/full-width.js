@@ -5,7 +5,7 @@ var resetDimensions = function() {
       section = $('.top.section'),
       boxHeight = $('.subscription.form').height(),
       navHeight = 52,
-      paddingTop = (winHeight - boxHeight) / 2 - navHeight - 50;
+      paddingTop = (winHeight - boxHeight) / 2 - navHeight - 35;
   section.css('max-height', (winHeight - navHeight) + 'px');
   section.css('height', (winHeight - navHeight) + 'px');
   section.css('padding-top', paddingTop);

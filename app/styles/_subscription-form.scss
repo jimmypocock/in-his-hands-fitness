@@ -9,6 +9,7 @@
   box-shadow: 0 4px 10px rgba($black,0.35);
   margin: 0 auto;
   text-align: center;
+  // position: relative;
   @include rem-fallback(padding, 1.5);
 
   h1,
@@ -20,8 +21,9 @@
 
   h1 {
     font-size: 5.5em;
-    font-weight: 300;
-    @include rem-fallback(margin-bottom, 2.25);
+    font-weight: 400;
+    font-family: $slab;
+    @include rem-fallback(margin-bottom, 1.5);
   }
 
   h2 {
@@ -63,5 +65,12 @@
       letter-spacing: 0.5px;
       font-weight: 600;
     }
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    @include rem-fallback(margin-bottom, 1.5);
+    width: 150px;
   }
 }
