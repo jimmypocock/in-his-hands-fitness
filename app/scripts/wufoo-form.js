@@ -2,9 +2,9 @@
 
 $(document).on('ready', function(){
   $('form.wufoo').on('submit', function(e){
-    var $email = $('.wufoo input[type="email"]'),
-        $submit = $('.wufoo input[type="submit"]'),
-        $messages = $('.wufoo .messages');
+    var $email = $(this).find('input[type="email"]'),
+        $submit = $(this).find('input[type="submit"]'),
+        $messages = $(this).find('.messages');
 
     if ($email.val() === ''){
       e.preventDefault();
