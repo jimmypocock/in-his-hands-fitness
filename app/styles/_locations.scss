@@ -1,0 +1,83 @@
+.locations.section {
+  @include rem-fallback(padding, 3, 0);
+  h3 {
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $slab;
+    font-size: 3.5em;
+    @include rem-fallback(margin-bottom, 3);
+    @include mobile {
+      font-size: 2.75em;
+    }
+  }
+  a {
+    color: $white;
+  }
+  .map {
+    @include background;
+    width: 300px;
+    height: 200px;
+    display: block;
+  }
+  .name {
+    color: $white;
+    font-size: 2em;
+    @include rem-fallback(margin-bottom, 0.5);
+    margin-bottom: 0.5rem;
+  }
+  .address {
+    color: $white;
+  }
+  .row {
+    .name .address {
+      @include mobile {
+        text-align: center;
+      }
+    }
+  }
+  .row {
+    @include rem-fallback(margin-bottom, 3);
+
+    &:nth-child(even) {
+      .map {
+        float:right;
+        box-shadow: inset -2px -2px 2px rgba($black, 0.4);
+        @include rem-fallback(margin-right, 1);
+      }
+      .name, .address {
+        text-align: left;
+        @include rem-fallback(margin-left, 1);
+      }
+    }
+    &:nth-child(odd) {
+      .text-container {float: left;}
+      .map-container {float: right;}
+      .map {
+        float:left;
+        box-shadow: inset 2px 2px 2px rgba($black, 0.4);
+        @include rem-fallback(margin-left, 1);
+      }
+      .name, .address {
+        text-align: right;
+        @include rem-fallback(margin-right, 1);
+      }
+    }
+    &:last-child {
+      // margin-bottom: 0;
+    }
+    @include mobile {
+      &:nth-child(even),
+      &:nth-child(odd) {
+        .map {
+          box-shadow: 0 0;
+          float: none;
+          margin: 0 auto;
+        }
+        .name, .address {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
