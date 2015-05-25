@@ -3,17 +3,8 @@
   box-shadow: 0px -3px 10px rgba($black,0.4);
   @include rem-fallback(padding, 3, 0);
   h3 {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: $slab;
-    font-size: 3.5em;
-    @include rem-fallback(margin-bottom, 3);
-    .clients {
+    strong {
       color: $blue;
-      font-weight: 600;
-    }
-    @include mobile {
-      font-size: 2.75em;
     }
   }
   .col-sm-4 {
@@ -44,7 +35,6 @@
   }
   .content {
     font-size: 1.5em;
-    // font-weight: 400;
     font-style: italic;
     text-align: center;
     @include rem-fallback(padding, 0, 1);
