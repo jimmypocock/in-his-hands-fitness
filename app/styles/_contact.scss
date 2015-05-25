@@ -1,6 +1,5 @@
 .contact.section {
   background: $white;
-  @include rem-fallback(padding, 3, 0);
   h3 {
     strong {
       color: $blue;
@@ -78,6 +77,11 @@
     }
   }
 
+  .subscription.form {
+    max-width: 350px;
+    float:left;
+  }
+
   .col-sm-6 {
     @include rem-fallback(margin-bottom, 3);
     &:nth-child(odd) {
@@ -92,6 +96,32 @@
         padding-left: 0;
         padding-right: 0;
       }
+    }
+  }
+  .copyright {
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-top: 1px solid rgba($blue, 0.45);
+    padding-top: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: $slab;
+
+    .in-his-hands {
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .capital {
+      font-size: 1.25em;
+    }
+    .fitness {
+      letter-spacing: 1px;
+      color: $blue;
+      font-weight: 400;
+      font-size: 1.25em;
+      text-transform: uppercase;
     }
   }
 }

@@ -4,12 +4,11 @@
   background-image:
     linear-gradient(
       to top right,
-      rgba($lightBlue, 0.1), rgba($blue, 0.1) 50%
+      rgba(lighten($blue, 20%), 0.1), rgba($blue, 0.1) 50%
     );
   box-shadow: 0 4px 10px rgba($black,0.35);
   margin: 0 auto;
   text-align: center;
-  // position: relative;
   @include rem-fallback(padding, 1.5);
 
   @include mobile {

@@ -13,6 +13,6 @@ var resetDimensions = function() {
   //   }
   //   section.css('padding-top', paddingTop);
   // }
-}
+};
 
 $(window).on('resize', resetDimensions);

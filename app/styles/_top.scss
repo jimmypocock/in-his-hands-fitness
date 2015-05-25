@@ -2,7 +2,6 @@
   @include background;
   background-attachment: fixed;
   background-image: url('../images/gym.png');
-  @include rem-fallback(padding, 3, 0);
   @include mobile {
     background-attachment: scroll;
     @include rem-fallback(padding, 1, 0);
