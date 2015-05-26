@@ -1,9 +1,19 @@
 .top.section {
   @include background;
   background-attachment: fixed;
-  background-image: url('../images/gym.png');
+  background-image: url('../images/home/bg.jpg');
+  position:relative;
   @include mobile {
     background-attachment: scroll;
     @include rem-fallback(padding, 1, 0);
+  }
+  .photo-credit {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: $black;
+    a {
+      color: $black;
+    }
   }
 }
