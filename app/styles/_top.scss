@@ -7,6 +7,12 @@
     background-attachment: scroll;
     @include rem-fallback(padding, 1, 0);
   }
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    @include rem-fallback(margin-bottom, 1.5);
+  }
   .photo-credit {
     position: absolute;
     bottom: 5px;

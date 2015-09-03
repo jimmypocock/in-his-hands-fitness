@@ -40,9 +40,9 @@
 
   p {
     line-height: 1.2;
-    font-size: 1.5em;
+    font-size: 2em;
     letter-spacing: 0.5px;
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
     @include rem-fallback(margin-bottom, 1.5);
   }
@@ -71,12 +71,5 @@
       letter-spacing: 0.5px;
       font-weight: 600;
     }
-  }
-
-  .logo {
-    display: block;
-    margin: 0 auto;
-    @include rem-fallback(margin-bottom, 1.5);
-    width: 150px;
   }
 }

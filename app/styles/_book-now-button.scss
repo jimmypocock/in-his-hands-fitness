@@ -1,0 +1,16 @@
+.book-now-button {
+  @include button-link($white, $blue, darken(rgba($blue, 0.7), 20%), $white, darken(rgba($blue, 0.7), 30%));
+  font-family: $slab;
+  width: 100%;
+  max-width: 350px;
+  font-size: 3em;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  padding: 10px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  text-align: center;
+}

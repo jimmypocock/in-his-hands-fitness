@@ -24,3 +24,29 @@
     margin-bottom: 0;
   }
 }
+
+@mixin button-link($bgColor,  $textColor, $hoverBgColor, $hoverTextColor, $activeColor) {
+  transition: background 0.2s ease,
+              color 0.2s ease;
+  background: $bgColor;
+  color: $textColor;
+  border: 0;
+  box-shadow: 0 0;
+  &:focus,
+  &:visited {
+    background: $bgColor;
+    text-decoration: none;
+    color: $textColor;
+  }
+  &:hover {
+    background: $hoverBgColor;
+    color: $hoverTextColor;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &:active {
+    background: $activeColor;
+    color: $textColor;
+  }
+}
+
